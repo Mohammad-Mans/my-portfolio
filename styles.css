@@ -16,6 +16,27 @@
     color: #fff;
 }
 
+.header .profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header .profile h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px;
+}
+
+.header .profile img{
+    border-radius: 50%;
+}
+
+.header .profile p {
+    padding: 20px;
+    font-size: 13px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
 .main{
     margin-left: 280px;
 }
