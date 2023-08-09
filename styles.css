@@ -5,3 +5,18 @@
     list-style: none;
     text-decoration: none;
 }
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vb;
+    width: 280px;
+    background-color: #1e2a3a;;
+    color: #fff;
+}
+
+.main{
+    margin-left: 280px;
+}
+
