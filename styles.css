@@ -80,6 +80,39 @@
     width: 100%;
 }
 
+.main-navbar {
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 1px solid rgba(119,68,139,0.2);
+}
+
+.main-navbar ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 30px;
+}
+
+.main-navbar a {
+    display: block;
+    width: fit-content;
+    color : #fff;
+    transition: 0.5s;
+}
+
+.main-navbar a:hover {
+    color: #77448b;
+}
+
+.main-navbar .fa-solid{
+    width: 40px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.main-navbar li{
+    padding: 20px;
+}
 
 
 
