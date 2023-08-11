@@ -24,7 +24,7 @@
     align-items: center;
 }
 
-.header .profile h1{
+.header .profile h2{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 20px;
 }
@@ -116,10 +116,112 @@
     padding: 20px;
 }
 
-
+/*------------------main------------------*/
 
 .main{
     margin-left: 290px;
+    background-color: #111821;
+    color:#fff
+}
+
+#about{
+    width: 100%;
+    padding: 60px 40px 0 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#about .about-me {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 60px;
+    border-bottom:1px solid rgba(119,68,139,0.2);
+    max-height: 400px;
+}
+
+#about .profile-teaser {
+    width: 60%;
+}
+
+#about .profile-teaser h1 {
+    font-size: 3rem;
+    line-height: 50px;
+}
+
+#about .profile-teaser h2 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: rgba(255,255,255,0.7);
+}
+
+#about .profile-teaser p {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    line-height: 25px;
+    color: rgba(255,255,255,0.7);
+}
+
+#about .profile-teaser a {
+    display: inline-block;
+    position: relative;
+    margin: 20px 0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+#about .profile-teaser a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+#about .profile-teaser a:hover::before{
+    width: 100%;
+}
+
+
+#about .profile-teaser a:nth-of-type(1) {
+    background-color: #77448b;
+    margin-right: 10px;
+}
+
+#about .profile-teaser a:nth-of-type(1):hover {
+    color: #77448b;
+}
+
+#about .profile-teaser a:nth-of-type(2) {
+    background-color: #2f435c;
+}
+
+#about .profile-teaser a:nth-of-type(2):hover {
+    color: #2f435c;
+}
+
+#about .profile-teaser .fa-solid {
+    padding-right: 10px;
+}
+
+#about .profile-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+#about .profile-photo img {
+    width: 100%;
 }
 
 @media (max-height: 700px){
@@ -146,3 +248,34 @@
 
 }
 
+
+@media (max-width: 1200px){
+    .header {
+        display: none;
+    }
+
+    .main {
+        margin: 0;
+    }
+
+
+    #about .about-me {
+        max-height: fit-content;
+    }
+}
+
+@media (max-width: 800px){
+    #about .about-me {
+        display: block;
+    }
+
+    #about .profile-teaser {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #about .profile-photo {
+        width: 100%;
+        padding: 20px;
+    }
+}
