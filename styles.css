@@ -15,14 +15,15 @@
     width: 300px;
     background-color: #343a40;;
     color: #fff;
-    overflow: hidden;
-    scrollbar-gutter: stable;
+    padding:0 10px;  
 }
 
 .header .profile{
+    width: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-bottom: 1px solid #e8e8e8;
 }
 
 .header .profile h2{
@@ -37,6 +38,7 @@
 }
 
 .header .profile p {
+    text-align: center;
     font-size: small;
     padding: 20px;
 }
@@ -45,6 +47,7 @@
     display: flex;
     width: 200px;
     margin: 0 20px;
+    padding-bottom: 20px;
     justify-content:space-between;
 }
 
@@ -85,9 +88,7 @@
 }
 
 .main-navbar {
-    margin-top: 20px;
-    padding: 20px;
-    border-top: 1px solid rgba(119,68,139,0.2);
+    padding: 10px;
 }
 
 .main-navbar ul{
@@ -226,7 +227,8 @@
 
 @media (max-height: 700px){
     .header{
-        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     .header::-webkit-scrollbar {
