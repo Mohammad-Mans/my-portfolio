@@ -12,7 +12,7 @@
     left: 0;
     height: 100vb;
     width: 290px;
-    background-color: #1e2a3a;;
+    background-color: #343a40;;
     color: #fff;
     overflow: hidden;
     scrollbar-gutter: stable;
@@ -120,8 +120,8 @@
 
 .main{
     margin-left: 290px;
-    background-color: #111821;
-    color:#fff
+    background-color: #e8e8e8;
+    color:#343a40;
 }
 
 #about{
@@ -150,14 +150,14 @@
 #about .profile-teaser h2 {
     font-size: 1.5rem;
     font-weight: 100;
-    color: rgba(255,255,255,0.7);
+    color: #343a40;
 }
 
 #about .profile-teaser p {
     margin-top: 20px;
     font-size: 0.95rem;
     line-height: 25px;
-    color: rgba(255,255,255,0.7);
+    color: #343a40;
 }
 
 #about .profile-teaser a {
@@ -202,11 +202,11 @@
 }
 
 #about .profile-teaser a:nth-of-type(2) {
-    background-color: #2f435c;
+    background-color: #343a40;
 }
 
 #about .profile-teaser a:nth-of-type(2):hover {
-    color: #2f435c;
+    color: #343a40;
 }
 
 #about .profile-teaser .fa-solid {
@@ -243,7 +243,7 @@
     }
 
     .header::-webkit-scrollbar-track {
-        background-color: #1e2a3a;
+        background-color: #343a40;
     }
 
 }
