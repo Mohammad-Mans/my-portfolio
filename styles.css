@@ -31,6 +31,8 @@
 
 .header .profile img{
     border-radius: 50%;
+    border: 5px solid #77448b;
+    background-color: #fff;
 }
 
 .header .profile p {
@@ -222,6 +224,7 @@
 
 #about .profile-photo img {
     width: 100%;
+    border: 1px solid #343a40;
 }
 
 @media (max-height: 700px){
