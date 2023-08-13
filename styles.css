@@ -4,6 +4,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header {
@@ -11,7 +12,7 @@
     top: 0;
     left: 0;
     height: 100vb;
-    width: 290px;
+    width: 300px;
     background-color: #343a40;;
     color: #fff;
     overflow: hidden;
@@ -25,7 +26,7 @@
 }
 
 .header .profile h2{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
     margin: 20px;
 }
 
@@ -36,9 +37,8 @@
 }
 
 .header .profile p {
+    font-size: small;
     padding: 20px;
-    font-size: 13px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 .header .profile .social-list {
@@ -94,7 +94,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 30px;
+    font-size: xx-large;
 }
 
 .main-navbar a {
@@ -121,7 +121,7 @@
 /*------------------main------------------*/
 
 .main{
-    margin-left: 290px;
+    margin-left: 300px;
     background-color: #e8e8e8;
     color:#343a40;
 }
@@ -129,7 +129,6 @@
 #about{
     width: 100%;
     padding: 60px 40px 0 40px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #about .about-me {
@@ -145,21 +144,20 @@
 }
 
 #about .profile-teaser h1 {
-    font-size: 3rem;
-    line-height: 50px;
+    font-size: 2REM;
 }
 
 #about .profile-teaser h2 {
-    font-size: 1.5rem;
-    font-weight: 100;
-    color: #343a40;
+    font-size: medium;
+    font-weight: 400;
+    font-style: italic;
 }
 
 #about .profile-teaser p {
+    font-size:medium;
+    font-weight:500;
     margin-top: 20px;
-    font-size: 0.95rem;
-    line-height: 25px;
-    color: #343a40;
+    line-height: 30px;
 }
 
 #about .profile-teaser a {
@@ -168,9 +166,8 @@
     margin: 20px 0;
     padding: 10px 20px;
     border-radius: 8px;
+    font-style: italic;
     color: #fff;
-    font-size: 16px;
-    font-weight: bold;
     text-align: center;
     overflow: hidden;
     transition: 0.5s;
