@@ -471,6 +471,10 @@
         width: 100%;
     }
 
+    #about .profile-teaser a {
+        font-size: 2vw;
+    }
+
     #projects .projects-container{
         flex-wrap: wrap;
     }
