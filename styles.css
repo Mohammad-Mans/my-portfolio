@@ -297,6 +297,111 @@
     border-radius: 50px 0 0 50px;
 }
 
+#projects {
+    padding: 60px;
+    background-color: #ededed;
+}
+
+#projects h2 {
+    position: relative;
+    padding-left: 20px;
+    font-weight: 500;
+}
+
+#projects h2::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 100%;
+    background: #77448b;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#projects .projects-container {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    
+}
+
+#projects .project-box {
+    width: 500px;
+    font-size: 1vw;
+    display: flex;
+    justify-content: center; 
+    background-color: #e1e1e1;
+    transition: 0.5s;
+}
+
+.project-box:hover {
+    background-color: #e1e1e1;
+}
+
+.project-box .project-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.project-img img {
+    width: 100%;
+}
+
+.project-box .project-info {
+    width: 60%;
+    padding: 20px 20px 10px 40px;
+}
+
+.project-info p {
+    margin-top: 10px;
+}
+
+.project-info .project-link {
+    margin-top: 10px;
+}
+
+.project-link a {
+    display: inline-block;
+    position: relative;
+    padding: 5px 20px;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #77448b;
+    font-style: italic;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.project-link a:hover {
+    color: #77448b;
+}
+
+.project-link a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.project-link a:hover::before{
+    width: 100%;
+}
+
+.project-link .fa-solid {
+    padding-right: 10px;
+}
+
 @media (max-height: 700px){
     .header{
         overflow-x: hidden;
@@ -338,7 +443,7 @@
     }
 }
 
-@media (max-width: 800px){
+@media (max-width: 900px){
     #about .about-me {
         padding: 20px;
         display: block;
@@ -351,4 +456,14 @@
     #about .profile-photo {
         width: 100%;
     }
+
+    #projects .projects-container{
+        flex-wrap: wrap;
+    }
+
+    #projects .project-box {
+        width: 100%;
+        font-size: 2vw;
+    }
+
 }
