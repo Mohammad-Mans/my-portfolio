@@ -271,15 +271,15 @@
 }
 
 #about .skills-container .skill-box .skill-icon {
-    width: 60px;
+    width: 100px;
     z-index: 1;
 }
 
 #about .skills-container .skill-box .skill-img {
     position: relative;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -292,9 +292,9 @@
     top: 0;
     left: 0;
     width: 50%;
-    height: 100px;
+    height: 150px;
     background-color: #343a40;
-    border-radius: 50px 0 0 50px;
+    border-radius: 75px 0 0 75px;
 }
 
 #projects {
