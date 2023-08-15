@@ -145,12 +145,26 @@
 }
 
 #about .profile-teaser h1 {
+    position: relative;
+    padding-left: 20px;
     font-size: 30px;
+}
+
+#about .profile-teaser h1::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 100%;
+    background: #77448b;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 #about .profile-teaser h2 {
     font-size: medium;
     font-weight: 400;
+    padding-left: 20px;
     font-style: italic;
 }
 
