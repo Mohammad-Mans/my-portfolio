@@ -549,6 +549,7 @@
   
 .footer p {
     margin: 0;
+    font-style: italic;
 }
 
 @media (max-height: 700px){
