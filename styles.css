@@ -583,14 +583,10 @@
 @media (max-width: 900px){
     #about .about-me {
         padding: 20px;
-        display: block;
+        flex-wrap: wrap;
     }
 
-    #about .profile-teaser {
-        width: 100%;
-    }
-
-    #about .profile-photo {
+    #about .profile-teaser , #about .profile-photo {
         width: 100%;
     }
 
