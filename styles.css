@@ -7,14 +7,24 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root {
+    --main-gray-color: #343a40;
+    --main-purple-color: #77448b;
+    --link-hover-color: #5b356a;
+    --main-bg-color: #e8e8e8;
+    --secondary-bg-color: #e1e1e1;
+    --projects-bg-color: #ededed;
+    --white-color: #fff;
+}
+
 .header {
     position: fixed;
     top: 0;
     left: 0;
     height: 100vb;
     width: 300px;
-    background-color: #343a40;;
-    color: #fff;
+    background-color: var(--main-gray-color);;
+    color: var(--white-color);
     padding:0 10px;  
 }
 
@@ -23,7 +33,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid var(--main-bg-color);
 }
 
 .header .profile h2{
@@ -33,8 +43,8 @@
 
 .header .profile img{
     border-radius: 50%;
-    border: 5px solid #77448b;
-    background-color: #fff;
+    border: 5px solid var(--main-purple-color);
+    background-color: var(--white-color);
 }
 
 .header .profile p {
@@ -58,9 +68,9 @@
     align-items: center;
     width: 40px;
     height: 40px;
-    background-color: #77448b;
-    border: 1px solid #77448b;
-    color: #fff;
+    background-color: var(--main-purple-color);
+    border: 1px solid var(--main-purple-color);
+    color: var(--white-color);
     border-radius: 50%;
     overflow: hidden;
     transition: 0.5s;
@@ -68,7 +78,7 @@
 }
 
 .header .profile .social-list a:hover {
-    color: #77448b;
+    color: var(--main-purple-color);
 }
 
 .header .profile .social-list a::before {
@@ -78,7 +88,7 @@
     top: 0;
     width: 0;
     height: 100%;
-    background-color: #fff;
+    background-color: var(--white-color);
     transition: 0.5s;
     z-index: -1;
 }
@@ -101,12 +111,12 @@
 .main-navbar a {
     display: block;
     width: fit-content;
-    color : #fff;
+    color : var(--white-color);
     transition: 0.5s;
 }
 
 .main-navbar a:hover {
-    color: #77448b;
+    color: var(--main-purple-color);
 }
 
 .main-navbar .fa-solid{
@@ -123,8 +133,8 @@
 
 .main{
     margin-left: 300px;
-    background-color: #e8e8e8;
-    color:#343a40;
+    background-color: var(--main-bg-color);
+    color:var(--main-gray-color);
 }
 
 #about{
@@ -136,7 +146,7 @@
     display: flex;
     justify-content: space-between;
     padding: 66px 20px;
-    border-bottom:1px solid #343a40;
+    border-bottom:1px solid var(--main-gray-color);
     max-height: 400px;
 }
 
@@ -155,7 +165,7 @@
     display: inline-block;
     width: 5px;
     height: 100%;
-    background: #77448b;
+    background: var(--main-purple-color);
     position: absolute;
     left: 0;
     top: 0;
@@ -182,7 +192,7 @@
     padding: 10px 20px;
     border-radius: 8px;
     font-style: italic;
-    color: #fff;
+    color: var(--white-color);
     text-align: center;
     overflow: hidden;
     transition: 0.5s;
@@ -196,7 +206,7 @@
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #fff;
+    background-color: var(--white-color);
     transition: 0.5s;
     z-index: -1;
 }
@@ -207,20 +217,20 @@
 
 
 #about .profile-teaser a:nth-of-type(1) {
-    background-color: #77448b;
+    background-color: var(--main-purple-color);
     margin-right: 10px;
 }
 
 #about .profile-teaser a:nth-of-type(1):hover {
-    color: #77448b;
+    color: var(--main-purple-color);
 }
 
 #about .profile-teaser a:nth-of-type(2) {
-    background-color: #343a40;
+    background-color: var(--main-gray-color);
 }
 
 #about .profile-teaser a:nth-of-type(2):hover {
-    color: #343a40;
+    color: var(--main-gray-color);
 }
 
 #about .profile-teaser .fa-solid {
@@ -236,7 +246,7 @@
 
 #about .profile-photo img {
     width: 100%;
-    border: 1px solid #343a40;
+    border: 1px solid var(--main-gray-color);
 }
 
 #about .skills {
@@ -257,7 +267,7 @@
     bottom : 0;
     width: 80px;
     height: 3px;
-    background: #77448b;
+    background: var(--main-purple-color);
     
 }
 
@@ -298,7 +308,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--white-color);
 }
 
 #about .skills-container .skill-box .skill-img::before {
@@ -308,13 +318,13 @@
     left: 0;
     width: 50%;
     height: 150px;
-    background-color: #343a40;
+    background-color: var(--main-gray-color);
     border-radius: 75px 0 0 75px;
 }
 
 #projects {
     padding: 60px;
-    background-color: #ededed;
+    background-color: var(--projects-bg-color);
 }
 
 #projects h2 {
@@ -328,7 +338,7 @@
     display: inline-block;
     width: 5px;
     height: 100%;
-    background: #77448b;
+    background: var(--main-purple-color);
     position: absolute;
     left: 0;
     top: 0;
@@ -347,12 +357,8 @@
     font-size: 1vw;
     display: flex;
     justify-content: center; 
-    background-color: #e1e1e1;
+    background-color: var(--secondary-bg-color);
     transition: 0.5s;
-}
-
-.project-box:hover {
-    background-color: #e1e1e1;
 }
 
 .project-box .project-img {
@@ -384,8 +390,8 @@
     position: relative;
     padding: 5px 20px;
     border-radius: 8px;
-    color: #fff;
-    background-color: #77448b;
+    color: var(--white-color);
+    background-color: var(--main-purple-color);
     font-style: italic;
     text-align: center;
     overflow: hidden;
@@ -394,7 +400,7 @@
 }
 
 .project-link a:hover {
-    color: #77448b;
+    color: var(--main-purple-color);
 }
 
 .project-link a::before {
@@ -404,7 +410,7 @@
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #fff;
+    background-color: var(--white-color);
     transition: 0.5s;
     z-index: -1;
 }
@@ -419,7 +425,7 @@
 
 #contact {
     padding: 60px;
-    background-color: #e8e8e8;
+    background-color: var(--main-bg-color);
 }
 
 #contact .contact-intro h2 {
@@ -433,7 +439,7 @@
     display: inline-block;
     width: 5px;
     height: 100%;
-    background: #77448b;
+    background: var(--main-purple-color);
     position: absolute;
     left: 0;
     top: 0;
@@ -456,8 +462,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #fff;
-    color: #343a40;
+    background-color: var(--white-color);
+    color: var(--main-gray-color);
     padding: 40px;
 }
 
@@ -477,7 +483,7 @@
 }
 
 .my-info .social-list a {
-    color: #77448b;
+    color: var(--main-purple-color);
 }
 
 .my-info .social-list a:hover {
@@ -485,14 +491,14 @@
 }
 
 .my-info .social-list a:active {
-    color: #e1e1e1;
+    color: var(--secondary-bg-color);
 }
 
 #contact .contact-form {
     flex-basis: 70%;
-    background-color: #343a40;
+    background-color: var(--main-gray-color);
     text-align: center;
-    color: #fff;
+    color: var(--white-color);
     padding: 40px 60px;
 }
 
@@ -506,12 +512,12 @@
     width: 100%;
     padding: 10px;
     margin: 20px 0;
-    border: 1px solid #ccc;
+    border: 1px solid var(--secondary-bg-color);
     border-radius: 4px;
 }
 
 .contact-form input:focus,.contact-form textarea:focus {
-    border: 4px solid #77448b;
+    border: 4px solid var(--main-purple-color);
     outline: none;
 }
   
@@ -521,8 +527,8 @@
   
 .contact-form button {
     display: block;
-    background-color: #77448b;
-    color: white;
+    background-color: var(--main-purple-color);
+    color: var(--white-color);
     border: none;
     border-radius: 4px;
     margin-top: 10px;
@@ -531,18 +537,18 @@
 }
   
 .contact-form button:hover {
-    background-color: #5f2f71;
+    background-color: var(--link-hover-color);
 }
 
 .contact-form button:active {
-    color:#77448b;
-    background-color: #e1e1e1;
+    color:var(--main-purple-color);
+    background-color: var(--secondary-bg-color);
 }
 
 .footer {
     margin-left: 300px;
-    background-color: #77448b;
-    color: #fff;
+    background-color: var(--main-purple-color);
+    color: var(--white-color);
     text-align: center;
     padding: 20px 0;
 }
@@ -563,16 +569,16 @@
     }
 
     .header::-webkit-scrollbar-thumb {
-        background-image: linear-gradient(#77448b,#afafaf);
+        background-image: linear-gradient(var(--main-purple-color),#afafaf);
         border-radius: 100vw;
     }
 
     .header::-webkit-scrollbar-thumb:hover {
-        background-image: linear-gradient(#5b356a,#8f8f8f);
+        background-image: linear-gradient(var(--link-hover-color),#8f8f8f);
     }
 
     .header::-webkit-scrollbar-track {
-        background-color: #343a40;
+        background-color: var(--main-gray-color);
     }
 
 }
@@ -584,7 +590,7 @@
         height: 80px;
         overflow-y: hidden;
         z-index: 2;
-        border-bottom:1px solid #e1e1e1 ;
+        border-bottom:1px solid var(--secondary-bg-color) ;
     }
 
     .header .profile {
