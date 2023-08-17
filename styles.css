@@ -684,6 +684,15 @@
     }
 }
 
+@media (max-width: 450px){
+
+    #about .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    
+}
+
 @media (min-width: 1200px) {
 
     #about .skills-container {
