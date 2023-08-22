@@ -1,4 +1,3 @@
-[![Open in Visual Studio Code](https://img.shields.io/badge/Open%20in%20VS%20Code-blue?logo=visual-studio-code)](vscode://ms-vscode-remote.remote-containers/openfolder?url=https://github.com/Mohammad-Mans/my-portfolio)
 ![HTML](https://img.shields.io/badge/HTML-5-orange)
 ![CSS](https://img.shields.io/badge/CSS-3-blue)
 
@@ -38,7 +37,7 @@ Browse through the portfolio to discover my projects and designs. Each project c
 - Intuitive navigation for easy exploration
 
 
-## Include Credits
+## Credits
 
 ### References
 
@@ -48,5 +47,5 @@ Browse through the portfolio to discover my projects and designs. Each project c
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as long as you retain the original license notice.
+This project is licensed under the [MIT License](https://opensource.org/license/mit/). Feel free to use, modify, and distribute the code as long as you retain the original license notice.
 
