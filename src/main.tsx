@@ -1,14 +1,17 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App.tsx";
-
-import ThemeConfig from "./config/theme.config.jsx";
+import "./index.css";
+import ThemeConfig from "./config/theme.config.tsx";
+import "./config/firebaseConfig.js";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeConfig>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </ThemeConfig>
   </StrictMode>
 );
