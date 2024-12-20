@@ -13,18 +13,35 @@ const ThemeContext = createContext({
   isDarkMode: false,
 });
 
+const baseTheme = createTheme({
+  breakpoints: {
+    values: {
+      xxs: 0,
+      xs: 400,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1600,
+    },
+  },
+});
+
 const getDesignTokens = (mode: PaletteMode) => ({
   palette: {
     mode,
     primary: {
-      main: "#00FFFF",
+      main: "#199ff7",
       contrastText: common.white,
     },
     ...(mode === "light"
       ? {
           bgColor: {
-            light: "#fff",
-            main: "#f0f2f5",
+            light: "#fcfcfd",
+            main: "#f2eeef",
+            dark: "#efefee",
+          },
+          border: {
+            main: "#dedddd",
           },
         }
       : {
@@ -32,8 +49,17 @@ const getDesignTokens = (mode: PaletteMode) => ({
             light: "#242526",
             main: "#18191a",
           },
+          border: {
+            main: "#27272c",
+          },
         }),
   },
+
+  typography: {
+    fontFamily: "Poppins Regular",
+  },
+
+  breakpoints: baseTheme.breakpoints,
 });
 
 const ThemeConfig: React.FC<ThemeProp> = ({ children }) => {
