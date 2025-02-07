@@ -1,10 +1,13 @@
+import { Divider } from "@mui/material";
+import HeroSection from "./components/HeroSection";
 
 function HomePage() {
   return (
     <div>
-      This is Home Page
+      <HeroSection />
+      <Divider/>
     </div>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;
