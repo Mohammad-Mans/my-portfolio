@@ -2,7 +2,27 @@ import { Box, Grid, styled, Typography } from "@mui/material";
 import WebIcon from "../../../../assets/Icons/coding.png";
 import ResponsiveIcon from "../../../../assets/Icons/responsive.png";
 import AnimationIcon from "../../../../assets/Icons/animate.png";
-
+import FramerMotionIcon from "../../../../assets/Icons/framer-motion.svg";
+import FireBaseIcon from "../../../../assets/Icons/firebase.svg";
+import JavaIcon from "../../../../assets/Icons/java.svg";
+import VSCodeIcon from "../../../../assets/Icons/visual-studio-code.svg";
+import ViteIcon from "../../../../assets/Icons/vitejs.svg";
+import Marquee from "react-fast-marquee";
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNpm,
+  SiPostman,
+  SiPython,
+  SiCplusplus,
+  SiGit,
+  SiGithub,
+  SiMui,
+  SiNodedotjs,
+} from "react-icons/si";
 interface Service {
   icon: string;
   title: string;
@@ -45,16 +65,61 @@ const IconWrapper = styled(Box)(({ theme }) => ({
   },
 }));
 
+const TechCarousel = () => (
+  <Box width="100%" overflow="hidden">
+    <Marquee autoFill speed={80}>
+      <SiHtml5 size={48} color="#E44D26" style={{ marginRight: 60 }} />
+      <SiCss3 size={48} color="#1572B6" style={{ marginRight: 60 }} />
+      <SiJavascript size={48} color="#F7DF1E" style={{ marginRight: 60 }} />
+      <SiTypescript size={48} color="#3178C6" style={{ marginRight: 60 }} />
+      <SiReact size={48} color="#61DAFB" style={{ marginRight: 60 }} />
+      <SiNpm size={48} color="#CB3837" style={{ marginRight: 60 }} />
+      <SiPostman size={48} color="#FF6C37" style={{ marginRight: 60 }} />
+      <img
+        src={JavaIcon}
+        alt="Framer Motion"
+        style={{ width: 48, height: 48, marginRight: 60 }}
+      />
+      <SiPython size={48} color="#3776AB" style={{ marginRight: 60 }} />
+      <SiCplusplus size={48} color="#00599C" style={{ marginRight: 60 }} />
+      <SiGit size={48} color="#F05032" style={{ marginRight: 60 }} />
+      <SiGithub size={48} color="#181717" style={{ marginRight: 60 }} />
+      <SiMui size={48} color="#007FFF" style={{ marginRight: 60 }} />
+      <img
+        src={FireBaseIcon}
+        alt="Framer Motion"
+        style={{ width: 48, height: 48, marginRight: 60 }}
+      />
+      <img
+        src={ViteIcon}
+        alt="Framer Motion"
+        style={{ width: 48, height: 48, marginRight: 60 }}
+      />
+      <SiNodedotjs size={48} color="#339933" style={{ marginRight: 60 }} />
+      <img
+        src={FramerMotionIcon}
+        alt="Framer Motion"
+        style={{ width: 48, height: 48, marginRight: 60 }}
+      />
+      <img
+        src={VSCodeIcon}
+        alt="Framer Motion"
+        style={{ width: 48, height: 48, marginRight: 60 }}
+      />
+    </Marquee>
+  </Box>
+);
+
 const MyServicesSection: React.FC = () => {
   return (
     <Box id="services" display="flex" py={4} justifyContent="center">
       <Box
         display="flex"
-        flexDirection={{ xxs: "column", md: "row" }}
-        justifyContent="space-between"
+        flexDirection="column"
         alignItems="center"
         flex={2}
-        maxWidth="1300px"
+        gap={8}
+        overflow="hidden"
       >
         <Grid container spacing={4} justifyContent="center">
           {services.map((service, index) => (
@@ -95,6 +160,8 @@ const MyServicesSection: React.FC = () => {
             </Grid>
           ))}
         </Grid>
+
+        <TechCarousel />
       </Box>
     </Box>
   );
