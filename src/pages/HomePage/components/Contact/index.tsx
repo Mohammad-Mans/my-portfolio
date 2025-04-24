@@ -78,11 +78,6 @@ const ContactSection: React.FC = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            slotProps={{
-              input: {
-                disableUnderline: true,
-              },
-            }}
           />
 
           <StyledTextField
@@ -94,11 +89,6 @@ const ContactSection: React.FC = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
-            slotProps={{
-              input: {
-                disableUnderline: true,
-              },
-            }}
           />
 
           <Button
@@ -116,7 +106,12 @@ const ContactSection: React.FC = () => {
           </Button>
         </Box>
       </Box>
-      <Box display={{ xxs: "none", md: "flex" }} flex={1} ml={4}>
+      <Box
+        display={{ xxs: "none", md: "flex" }}
+        flex={1}
+        ml={4}
+        maxHeight={400}
+      >
         <Lottie
           animationData={MessageAnimation}
           loop={true}
