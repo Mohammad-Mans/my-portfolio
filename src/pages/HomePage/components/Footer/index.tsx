@@ -48,8 +48,6 @@ const FooterSection: React.FC = () => {
         justifyContent="space-between"
         alignItems="center"
         flex={2}
-
-        maxWidth="1300px"
       >
         <Box my={2}>
           <StyledIconButton>

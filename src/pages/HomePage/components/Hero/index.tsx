@@ -85,7 +85,7 @@ const HeroSection: React.FC = () => {
           </StyledButton>
         </Box>
       </Box>
-      <Box display={{ xxs: "none", lg: "flex" }} flex={1.3} ml={4}>
+      <Box display={{ xxs: "none", lg: "flex" }} flex={1.3} ml={4} maxHeight={500}>
         <Lottie
           animationData={LaptopAnimation}
           loop={true}
