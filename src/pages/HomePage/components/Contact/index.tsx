@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TextField, Button, Box, Alert, styled } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import Lottie from "lottie-react";
-import MessageAnimation from "../../../assets/lotties/Message.json";
+import MessageAnimation from "../../../../assets/lotties/Message.json";
 import axios from "axios";
 
 const StyledTextField = styled(TextField)(({ theme }) => ({

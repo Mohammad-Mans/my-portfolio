@@ -1,6 +1,6 @@
 import Lottie from "lottie-react";
-import LaptopAnimation from "../../../assets/lotties/Laptop.json";
-import MyAvatar from "../../../assets/images/my-photo.png";
+import LaptopAnimation from "../../../../assets/lotties/Laptop.json";
+import MyAvatar from "../../../../assets/images/my-photo.png";
 import {
   Avatar,
   Box,
@@ -14,7 +14,7 @@ import { Download, GitHub, LinkedIn } from "@mui/icons-material";
 const AvatarWrapper = styled(Box)(({ theme }) => ({
   width: "min-content",
   display: "inline-flex",
-  padding: "5px",
+  padding: "2px",
   borderRadius: "50%",
   backgroundColor: theme.palette.bgColor.main,
   border: `1px solid ${theme.palette.primary.main}`,
@@ -49,7 +49,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-function HeroSection() {
+const HeroSection: React.FC = () => {
   return (
     <Box id="about" display="flex" py={4} justifyContent="center">
       <Box display="flex" flexDirection="column" flex={2} maxWidth="1300px">
