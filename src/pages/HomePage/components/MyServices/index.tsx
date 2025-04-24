@@ -54,7 +54,7 @@ const IconWrapper = styled(Box)(({ theme }) => ({
   width: 220,
   height: 220,
   borderRadius: "50%",
-  backgroundColor: theme.palette.grey[100],
+  backgroundColor: theme.palette.bgColor.light,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -83,7 +83,7 @@ const TechCarousel = () => (
       <SiPython size={48} color="#3776AB" style={{ marginRight: 60 }} />
       <SiCplusplus size={48} color="#00599C" style={{ marginRight: 60 }} />
       <SiGit size={48} color="#F05032" style={{ marginRight: 60 }} />
-      <SiGithub size={48} color="#181717" style={{ marginRight: 60 }} />
+      <SiGithub size={48} color="#100000" style={{ marginRight: 60 }} />
       <SiMui size={48} color="#007FFF" style={{ marginRight: 60 }} />
       <img
         src={FireBaseIcon}
