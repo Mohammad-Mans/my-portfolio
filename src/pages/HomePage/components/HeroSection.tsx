@@ -1,6 +1,6 @@
 import Lottie from "lottie-react";
 import LaptopAnimation from "../../../assets/lotties/Laptop.json";
-import MyAvatar from "../../../assets/images/my-photo.jfif";
+import MyAvatar from "../../../assets/images/my-photo.png";
 import {
   Avatar,
   Box,
