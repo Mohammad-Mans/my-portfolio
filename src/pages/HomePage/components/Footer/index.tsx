@@ -1,5 +1,12 @@
 import { GitHub, LinkedIn } from "@mui/icons-material";
-import { IconButton, Box, styled, Button, ButtonProps, Stack } from "@mui/material";
+import {
+  IconButton,
+  Box,
+  styled,
+  Button,
+  ButtonProps,
+  Stack,
+} from "@mui/material";
 
 const pages = ["about", "services", "projects", "contact"];
 
@@ -41,31 +48,29 @@ const FooterSection: React.FC = () => {
   };
 
   return (
-    <Box id="footer" display="flex" py={4} justifyContent="center">
-      <Box
-        display="flex"
-        flexDirection={{ xxs: "column", md: "row" }}
-        justifyContent="space-between"
-        alignItems="center"
-        flex={2}
-      >
-        <Box my={2}>
-          <StyledIconButton>
-            <GitHub />
-          </StyledIconButton>
-          <StyledIconButton>
-            <LinkedIn />
-          </StyledIconButton>
-        </Box>
-
-        <Stack direction="row" flexWrap="wrap" justifyContent="center">
-          {pages.map((page) => (
-            <StyledButton key={page} onClick={() => handleSectionClick(page)}>
-              {page}
-            </StyledButton>
-          ))}
-        </Stack>
+    <Box
+      id="footer"
+      display="flex"
+      flexDirection={{ xxs: "column", md: "row" }}
+      justifyContent="space-between"
+      alignItems="center"
+      py={4}
+    >
+      <Box my={2}>
+        <StyledIconButton>
+          <GitHub />
+        </StyledIconButton>
+        <StyledIconButton>
+          <LinkedIn />
+        </StyledIconButton>
       </Box>
+      <Stack direction="row" flexWrap="wrap" justifyContent="center">
+        {pages.map((page) => (
+          <StyledButton key={page} onClick={() => handleSectionClick(page)}>
+            {page}
+          </StyledButton>
+        ))}
+      </Stack>
     </Box>
   );
 };

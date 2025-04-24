@@ -10,10 +10,10 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
     backgroundColor: theme.palette.bgColor.light,
     overflow: "none",
-    borderRadius: "16px",
+    borderRadius: "8px",
   },
   "& fieldset": {
-    borderRadius: "16px",
+    borderRadius: "8px",
     paddingLeft: theme.spacing(1.5),
   },
   "& label": { paddingLeft: theme.spacing(1) },

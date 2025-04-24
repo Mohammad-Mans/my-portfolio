@@ -5,6 +5,7 @@ import {
   FooterSection,
   CopyrightSection,
   MyServicesSection,
+  ProjectsSection,
 } from "./components";
 
 function HomePage() {
@@ -13,6 +14,8 @@ function HomePage() {
       <HeroSection />
       <Divider />
       <MyServicesSection />
+      <Divider />
+      <ProjectsSection />
       <Divider />
       <ContactSection />
       <Divider />
