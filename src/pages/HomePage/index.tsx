@@ -4,12 +4,15 @@ import {
   ContactSection,
   FooterSection,
   CopyrightSection,
+  MyServicesSection,
 } from "./components";
 
 function HomePage() {
   return (
     <div>
       <HeroSection />
+      <Divider />
+      <MyServicesSection />
       <Divider />
       <ContactSection />
       <Divider />
