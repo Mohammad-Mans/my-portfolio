@@ -207,10 +207,9 @@ function NavBar() {
                 onClose={handleCloseNavMenu}
               >
                 {pages.map((page, index) => (
-                  <>
+                  <Box key={page}>
                     {index !== 0 && <Divider />}
                     <MenuItem
-                      key={page}
                       onClick={() => {
                         handleSectionClick(page);
                       }}
@@ -224,7 +223,7 @@ function NavBar() {
                         {page.toUpperCase()}
                       </Typography>
                     </MenuItem>
-                  </>
+                  </Box>
                 ))}
               </StyledMenu>
             </StyledContainer>
