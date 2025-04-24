@@ -116,7 +116,7 @@ const ContactSection: React.FC = () => {
           </Button>
         </Box>
       </Box>
-      <Box display="flex" flex={1}>
+      <Box display={{ xxs: "none", md: "flex" }} flex={1} ml={4}>
         <Lottie
           animationData={MessageAnimation}
           loop={true}

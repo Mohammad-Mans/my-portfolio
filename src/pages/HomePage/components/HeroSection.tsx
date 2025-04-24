@@ -41,7 +41,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
   border: `1px solid ${theme.palette.bgColor.light}`,
   borderRadius: "30px",
   padding: theme.spacing(1.5),
-  color: theme.palette.text.disabled,
+  color: theme.palette.primary.main,
   fontFamily: "Poppins SemiBold",
   "&:hover": {
     backgroundColor: theme.palette.bgColor.light,
@@ -56,8 +56,13 @@ function HeroSection() {
         <AvatarWrapper>
           <StyledAvatar src={MyAvatar} />
         </AvatarWrapper>
-        <Typography variant="h3" fontFamily="Poppins Bold" my={2}>
-          Mohammad Mansour, Compute Systems Engineer.
+        <Typography
+          variant="h3"
+          fontFamily="Poppins Bold"
+          fontSize={{ xxs: "2rem", sm: "2.3rem", md: "3rem" }}
+          my={2}
+        >
+          Mohammad Mansour, Computer Systems Engineer.
         </Typography>
         <Typography my={2}>
           Hi, I'm a CSE Student immersing myself in the art of front-end and web
@@ -80,7 +85,7 @@ function HeroSection() {
           </StyledButton>
         </Box>
       </Box>
-      <Box display="flex" flex={1.3}>
+      <Box display={{ xxs: "none", lg: "flex" }} flex={1.3} ml={4}>
         <Lottie
           animationData={LaptopAnimation}
           loop={true}
