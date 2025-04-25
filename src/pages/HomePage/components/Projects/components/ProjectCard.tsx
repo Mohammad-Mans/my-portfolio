@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import React from "react";
+import { IoIosLink } from "react-icons/io";
 
 interface ProjectCardProps {
   title: string;
@@ -21,7 +22,7 @@ interface ProjectCardProps {
 }
 
 const StyledCard = styled(Card)(({ theme }) => ({
-  maxWidth: 345,
+  maxWidth: 300,
   backgroundColor: theme.palette.bgColor.light,
   borderRadius: theme.spacing(1),
   border: `1px solid ${theme.palette.primary.main}`,
@@ -32,8 +33,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
   height: "100%",
   transition: "transform 0.3s ease, box-shadow 0.3s ease",
   "&:hover": {
-    transform: "scale(1.03)",
-    boxShadow: "0 8px 30px rgba(0, 0, 0, 0.2)",
+    transform: " scale(1.03)",
   },
 }));
 
@@ -69,6 +69,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
+            sx={{border:(theme)=>`1px solid ${theme.palette.border.main}`}}
           >
             <GitHubIcon />
           </IconButton>
@@ -77,12 +78,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         )}
 
         <Button
-          size="small"
           variant="text"
           href={demoLink}
           target="_blank"
           rel="noopener noreferrer"
-          sx={{ color: "#3b82f6", textTransform: "none" }}
+          startIcon={<IoIosLink color="#199ff7" />}
+          sx={{ textTransform: "none" }}
         >
           View
         </Button>
