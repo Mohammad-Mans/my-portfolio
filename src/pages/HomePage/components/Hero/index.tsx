@@ -69,7 +69,7 @@ const HeroSection: React.FC = () => {
             <LinkedIn />
           </StyledIconButton>
           <StyledButton
-            href="https://drive.google.com/file/d/1cbt5qT99vE1LOWSNmbPW3_pZQv0V2JZC/view?usp=sharing"
+            href="https://drive.google.com/file/d/1pruvaGPBClUyljiRoiwCFytpeJRa5OV6/view?usp=sharing"
             endIcon={<Download />}
           >
             Download CV
