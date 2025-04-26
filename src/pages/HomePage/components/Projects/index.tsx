@@ -11,37 +11,37 @@ const projects = [
   {
     title: "STEMerLab",
     description:
-      "A simple weather application built with React and OpenWeather API, allowing users to search for current weather conditions worldwide.",
+      "A responsive website to showcase onsite courses and blogs, leveraging Firebase for backend functionality including content management, user authentication, and real-time data handling via an admin dashboard",
     image: STEMerLab,
     demoLink: "https://stemerlab.com/",
   },
   {
     title: "Astrotech Landing Page",
     description:
-      "A simple weather application built with React and OpenWeather API, allowing users to search for current weather conditions worldwide.",
+      "A responsive landing page using React TypeScript, Material UI, and Framer Motion to create cohesive layouts and smooth animations, enhancing user experience",
     image: Astrotech,
     demoLink: "https://astrotechltd.com/",
   },
   {
-    title: "Travil & Booking Platform",
+    title: "Travil Booking Platform",
     description:
-      "A personal portfolio built using React and MUI, showcasing projects, skills, and contact information in a clean, responsive layout.",
+      "A travel booking platform I built during my Foothill internship with React TypeScript, MUI, and Vite, featuring user/admin access, search filters, hotel listings, maps, and PDF confirmations.",
     image: VistaVoyage,
     demoLink: "https://vista-voyage-mo.vercel.app/",
     githubLink: "https://github.com/Mohammad-Mans/Travel-Booking-Platform",
   },
   {
-    title: "Note Keeper",
+    title: "My Note Keeper",
     description:
-      "An online store platform built with Next.js and Stripe for payments. Features product listings, shopping cart, and checkout flow.",
+      "A full-stack note-taking app built with React.js and MUI on the frontend, and Node.js, Express.js, and MongoDB on the backend. Supports adding, editing, deleting, and searching notes with a clean, responsive UI and robust RESTful API integration",
     image: NoteKeeper,
     demoLink: "https://note-keeper-mo.vercel.app",
-    githubLink: "https://github.com/Mohammad-Mans/frontend-note-keeper-webkit",
+    githubLink: "https://github.com/Mohammad-Mans/my-note-keeper-frontend",
   },
   {
     title: "Twitter Profile Clone",
     description:
-      "A Netflix-inspired web app built with React and Firebase. Features include user authentication, browsing movies, and a personalized watchlist.",
+      "A static clone of a Twitter profile page built with React and MUI. This project showcases my ability to replicate complex UIs and was my first hands-on experience with React, focusing on component structure, styling, and responsive design",
     image: TwitterClone,
     demoLink: "https://twitter-clone-mo.vercel.app",
     githubLink: "https://github.com/Mohammad-Mans/twitter-react-profile",
@@ -50,7 +50,7 @@ const projects = [
   {
     title: "TODO List",
     description:
-      "This application is a replica of the popular Spotify platform, built using Vue.js, Tailwind CSS, and Pinia.",
+      "A task management web app built with HTML, CSS, and JavaScript. Features include adding, deleting, marking tasks as done, searching, and real-time task counts. Designed with a clean, modern UI and fully responsive layout",
     image: Todo,
     demoLink: "https://todo-list-mo.vercel.app",
     githubLink: "https://github.com/Mohammad-Mans/todo-list",
