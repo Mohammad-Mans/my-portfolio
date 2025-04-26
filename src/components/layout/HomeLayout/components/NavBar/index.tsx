@@ -80,7 +80,7 @@ const StyledButton = styled((props: ButtonProps) => <Button {...props} />)(
   ({ theme }) => ({
     display: "block",
     padding: theme.spacing(1.5),
-    fontFamily: "Poppins SemiBold",
+    fontWeight: 700,
     color: theme.palette.text.primary,
     "&:hover": {
       color: theme.palette.primary.main,
@@ -169,15 +169,32 @@ function NavBar() {
   };
 
   const handleSectionClick = (sectionId: string) => {
-    const appBarHeight = document.getElementById("appbar")?.offsetHeight || 0;
-    const destinationElement = document.getElementById(sectionId);
-    if (destinationElement) {
-      const offsetTop = destinationElement.offsetTop - appBarHeight;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
-    }
+    const el = document.getElementById(sectionId);
+    if (!el) return;
+
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    let lastY = window.scrollY;
+    let idleCount = 0;
+
+    const checkScrollFinished = () => {
+      const currentY = window.scrollY;
+
+      if (currentY === lastY) {
+        idleCount++;
+      } else {
+        idleCount = 0;
+        lastY = currentY;
+      }
+
+      if (idleCount > 5) {
+        window.scrollBy(0, 1);
+      } else {
+        requestAnimationFrame(checkScrollFinished);
+      }
+    };
+
+    requestAnimationFrame(checkScrollFinished);
     handleCloseNavMenu();
   };
 
@@ -216,7 +233,7 @@ function NavBar() {
                     >
                       <Typography
                         textAlign="center"
-                        fontFamily="Poppins SemiBold"
+                        fontWeight={600}
                         width="100vw"
                         fontSize="1.2em"
                       >

@@ -23,6 +23,7 @@ import {
   SiMui,
   SiNodedotjs,
 } from "react-icons/si";
+import SectionTitle from "../../../../components/common/SectionTitle";
 interface Service {
   icon: string;
   title: string;
@@ -112,57 +113,53 @@ const TechCarousel = () => (
 
 const MyServicesSection: React.FC = () => {
   return (
-    <Box id="services" display="flex" py={4} justifyContent="center">
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        flex={2}
-        gap={8}
-        overflow="hidden"
-      >
-        <Grid container spacing={4} justifyContent="center">
-          {services.map((service, index) => (
-            <Grid size={{ xxs: 12, md: 6, lg: 4 }} key={index}>
-              <Box
-                px={2}
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                textAlign="center"
-              >
-                <IconWrapper>
-                  <img
-                    src={service.icon}
-                    alt={service.title}
-                    style={{ width: 140, height: 140 }}
-                  />
-                </IconWrapper>
-
-                <Typography
-                  variant="h6"
-                  fontFamily="Poppins SemiBold"
-                  gutterBottom
-                >
-                  {service.title}
-                </Typography>
-                <Box
-                  height="3px"
-                  width="40px"
-                  bgcolor={(theme) => theme.palette.primary.main}
-                  mx="auto"
-                  mb={2}
+    <Box
+      id="services"
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+      py={4}
+      overflow="hidden"
+    >
+      <SectionTitle title="What I Do" />
+      <Grid container spacing={4} justifyContent="center" mb={8}>
+        {services.map((service, index) => (
+          <Grid size={{ xxs: 12, md: 6, lg: 4 }} key={index}>
+            <Box
+              px={2}
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              textAlign="center"
+            >
+              <IconWrapper>
+                <img
+                  src={service.icon}
+                  alt={service.title}
+                  style={{ width: 140, height: 140 }}
                 />
-                <Typography variant="body2" color="text.secondary">
-                  {service.description}
-                </Typography>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
+              </IconWrapper>
 
-        <TechCarousel />
-      </Box>
+              <Typography variant="h6" fontWeight={600} gutterBottom>
+                {service.title}
+              </Typography>
+              <Box
+                height="3px"
+                width="40px"
+                bgcolor={(theme) => theme.palette.primary.main}
+                mx="auto"
+                mb={2}
+              />
+              <Typography variant="body2" color="text.secondary">
+                {service.description}
+              </Typography>
+            </Box>
+          </Grid>
+        ))}
+      </Grid>
+
+      <TechCarousel />
     </Box>
   );
 };

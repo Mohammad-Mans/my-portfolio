@@ -6,6 +6,7 @@ import NoteKeeper from "../../../../assets/images/note-keeper.png";
 import VistaVoyage from "../../../../assets/images/vista-voyage.png";
 import STEMerLab from "../../../../assets/images/STEMer-lab.png";
 import Astrotech from "../../../../assets/images/astrotech.png";
+import SectionTitle from "../../../../components/common/SectionTitle";
 const projects = [
   {
     title: "STEMerLab",
@@ -58,7 +59,15 @@ const projects = [
 
 const ProjectSection: React.FC = () => {
   return (
-    <Box id="projects" display="flex" py={4} justifyContent="center">
+    <Box
+      id="projects"
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+      py={4}
+    >
+      <SectionTitle title="Projects" />
       <Stack
         direction="row"
         spacing={4}

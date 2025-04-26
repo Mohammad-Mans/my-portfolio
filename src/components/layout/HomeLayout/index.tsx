@@ -27,7 +27,7 @@ const InnerContainer = styled((props: ContainerProps) => (
 
 function HomeLayout() {
   return (
-    <Box minHeight="100vh" bgcolor="bgColor.dark">
+    <Box id='about' minHeight="100vh" bgcolor="bgColor.dark">
       <OuterContainer>
         <InnerContainer>
           <NavBar />

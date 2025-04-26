@@ -1,15 +1,9 @@
 import Lottie from "lottie-react";
 import LaptopAnimation from "../../../../assets/lotties/Laptop.json";
 import MyAvatar from "../../../../assets/images/my-photo.png";
-import {
-  Avatar,
-  Box,
-  Button,
-  IconButton,
-  Typography,
-  styled,
-} from "@mui/material";
+import { Avatar, Box, Button, Typography, styled } from "@mui/material";
 import { Download, GitHub, LinkedIn } from "@mui/icons-material";
+import StyledIconButton from "../../../../components/common/StyledIconButton";
 
 const AvatarWrapper = styled(Box)(({ theme }) => ({
   width: "min-content",
@@ -25,24 +19,16 @@ const StyledAvatar = styled(Avatar)(() => ({
   height: "200px",
 }));
 
-const StyledIconButton = styled(IconButton)(({ theme }) => ({
-  backgroundColor: theme.palette.bgColor.light,
-  border: `1px solid ${theme.palette.bgColor.light}`,
-  marginRight: theme.spacing(2),
-  padding: theme.spacing(1.5),
-  "&:hover": {
-    backgroundColor: theme.palette.bgColor.light,
-    border: `1px solid ${theme.palette.primary.main}`,
-  },
-}));
-
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: theme.palette.bgColor.light,
   border: `1px solid ${theme.palette.bgColor.light}`,
   borderRadius: "30px",
-  padding: theme.spacing(1.5),
-  color: theme.palette.primary.main,
-  fontFamily: "Poppins SemiBold",
+  padding: `${theme.spacing(1.5)} ${theme.spacing(2)}`,
+  color:
+    theme.palette.mode === "light"
+      ? "rgba(0, 0, 0, 0.54)"
+      : "rgb(255, 255, 255)",
+  fontWeight: 600,
   "&:hover": {
     backgroundColor: theme.palette.bgColor.light,
     border: `1px solid ${theme.palette.primary.main}`,
@@ -51,41 +37,51 @@ const StyledButton = styled(Button)(({ theme }) => ({
 
 const HeroSection: React.FC = () => {
   return (
-    <Box id="about" display="flex" py={4} justifyContent="center">
+    <Box display="flex" py={4} justifyContent="center">
       <Box display="flex" flexDirection="column" flex={2} maxWidth="1300px">
         <AvatarWrapper>
           <StyledAvatar src={MyAvatar} />
         </AvatarWrapper>
         <Typography
           variant="h3"
-          fontFamily="Poppins Bold"
-          fontSize={{ xxs: "2rem", sm: "2.3rem", md: "3rem" }}
-          my={2}
+          fontWeight={700}
+          fontSize={{ xxs: "1.7rem", sm: "2.3rem", md: "2.7rem" }}
+          mt={2}
         >
           Mohammad Mansour, Computer Systems Engineer.
         </Typography>
         <Typography my={2}>
-          Hi, I'm a CSE Student immersing myself in the art of front-end and web
-          development. Join me as I present my web development endeavors, all
-          meticulously brought to life using the power of code. Want to find out
-          more about my experience? Check out my resumé!
+          Hi, I’m a Computer Systems Engineer with a passion for front-end
+          development and a drive to grow as a full-stack developer. I
+          specialize in building modern, responsive web applications that
+          deliver smooth user experiences. From crafting intuitive interfaces
+          with React and TypeScript to diving into backend technologies like
+          Firebase, I’m continually expanding my skills to create more robust
+          and scalable solutions. Explore my projects, where design meets
+          functionality, and join me on my journey as I deepen my expertise and
+          embrace new challenges in web development.
         </Typography>
         <Box my={2}>
-          <StyledIconButton>
+          <StyledIconButton href="https://github.com/Mohammad-Mans">
             <GitHub />
           </StyledIconButton>
-          <StyledIconButton>
+          <StyledIconButton href="https://www.linkedin.com/in/mohammad-mans">
             <LinkedIn />
           </StyledIconButton>
           <StyledButton
-            href="https://drive.google.com/file/d/1ptZqYBWDQchrU7ywNHch1UZeMGlwG6W6/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1cbt5qT99vE1LOWSNmbPW3_pZQv0V2JZC/view?usp=sharing"
             endIcon={<Download />}
           >
             Download CV
           </StyledButton>
         </Box>
       </Box>
-      <Box display={{ xxs: "none", lg: "flex" }} flex={1.3} ml={4} maxHeight={500}>
+      <Box
+        display={{ xxs: "none", lg: "flex" }}
+        flex={1.3}
+        ml={4}
+        maxHeight={500}
+      >
         <Lottie
           animationData={LaptopAnimation}
           loop={true}
@@ -94,6 +90,6 @@ const HeroSection: React.FC = () => {
       </Box>
     </Box>
   );
-}
+};
 
 export default HeroSection;

@@ -56,7 +56,7 @@ const getDesignTokens = (mode: PaletteMode) => ({
   },
 
   typography: {
-    fontFamily: "Poppins Regular",
+    fontFamily: ["Poppins", "sans-serif"].join(","),
   },
 
   breakpoints: baseTheme.breakpoints,

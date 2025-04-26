@@ -1,31 +1,14 @@
 import { GitHub, LinkedIn } from "@mui/icons-material";
-import {
-  IconButton,
-  Box,
-  styled,
-  Button,
-  ButtonProps,
-  Stack,
-} from "@mui/material";
+import { Box, styled, Button, ButtonProps, Stack } from "@mui/material";
+import StyledIconButton from "../../../../components/common/StyledIconButton";
 
 const pages = ["about", "services", "projects", "contact"];
-
-const StyledIconButton = styled(IconButton)(({ theme }) => ({
-  backgroundColor: theme.palette.bgColor.light,
-  border: `1px solid ${theme.palette.bgColor.light}`,
-  marginRight: theme.spacing(2),
-  padding: theme.spacing(1.5),
-  "&:hover": {
-    backgroundColor: theme.palette.bgColor.light,
-    border: `1px solid ${theme.palette.primary.main}`,
-  },
-}));
 
 const StyledButton = styled((props: ButtonProps) => <Button {...props} />)(
   ({ theme }) => ({
     display: "block",
     padding: theme.spacing(1.5),
-    fontFamily: "Poppins SemiBold",
+    fontWeight: 600,
     color: theme.palette.text.secondary,
     "&:hover": {
       color: theme.palette.primary.main,
@@ -36,15 +19,32 @@ const StyledButton = styled((props: ButtonProps) => <Button {...props} />)(
 
 const FooterSection: React.FC = () => {
   const handleSectionClick = (sectionId: string) => {
-    const appBarHeight = document.getElementById("appbar")?.offsetHeight || 0;
-    const destinationElement = document.getElementById(sectionId);
-    if (destinationElement) {
-      const offsetTop = destinationElement.offsetTop - appBarHeight;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
-    }
+    const el = document.getElementById(sectionId);
+    if (!el) return;
+
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    let lastY = window.scrollY;
+    let idleCount = 0;
+
+    const checkScrollFinished = () => {
+      const currentY = window.scrollY;
+
+      if (currentY === lastY) {
+        idleCount++;
+      } else {
+        idleCount = 0;
+        lastY = currentY;
+      }
+
+      if (idleCount > 5) {
+        window.scrollBy(0, 1);
+      } else {
+        requestAnimationFrame(checkScrollFinished);
+      }
+    };
+
+    requestAnimationFrame(checkScrollFinished);
   };
 
   return (
@@ -57,10 +57,10 @@ const FooterSection: React.FC = () => {
       py={4}
     >
       <Box my={2}>
-        <StyledIconButton>
+        <StyledIconButton href="https://github.com/Mohammad-Mans">
           <GitHub />
         </StyledIconButton>
-        <StyledIconButton>
+        <StyledIconButton href="https://www.linkedin.com/in/mohammad-mans">
           <LinkedIn />
         </StyledIconButton>
       </Box>
